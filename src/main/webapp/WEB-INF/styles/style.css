@@ -1,0 +1,42 @@
+.col-3{
+    float: left;
+    width:50%;
+    font-style: normal;
+    font-size: 30px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+header{
+    height: 50px;
+    background-color: cadetblue;
+}
+body{
+    margin: 0%;
+}
+.col-2{
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 50px;
+}
+footer{
+    height: 35px;
+    background-color: aquamarine;
+    padding-top: 15px;
+}
+th,td{
+    text-align: center;
+}
+.col-2edit{
+    padding-top: 10px;
+    text-align: right;
+    float: left;
+    width: 35%;
+}
+.col-2cart{
+    padding-top: 10px;
+    float: left;
+    text-align: right;
+    width: 10%;
+    
+}
