@@ -43,7 +43,7 @@ public class MenuItemDaoSqlImpl implements MenuItemDao {
         List<MenuItem> menuIteml = new ArrayList<>();
         String sql = "SELECT * FROM menu_item where me_active=1 and me_dol<=CURDATE(); ";
         Connection con = ConnectionHandler.getConnection();
-        PreparedStatement ps = con.prepareStatement(sql);
+        ps = con.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         // ps.setDate(5, rs.g, cal); //wrong
 
@@ -61,7 +61,7 @@ public class MenuItemDaoSqlImpl implements MenuItemDao {
         LOGGER.info("Start - getting menuItemList using menuItemID");
         String sql = "SELECT * FROM menu_item where me_id=?; ";
         Connection con = ConnectionHandler.getConnection();
-        PreparedStatement ps = con.prepareStatement(sql);
+        ps = con.prepareStatement(sql);
         ps.setLong(1, menuItemId);
         ResultSet rs = ps.executeQuery();
         rs.first();
@@ -77,7 +77,7 @@ public class MenuItemDaoSqlImpl implements MenuItemDao {
         LOGGER.info("Start - Modifying menuItem");
         String sql = "UPDATE menu_item SET me_name=?,me_price=?,me_active=?,me_dol=? where me_id=?;";
         Connection con = ConnectionHandler.getConnection();
-        PreparedStatement ps = con.prepareStatement(sql);
+        ps = con.prepareStatement(sql);
         ps.setString(1, menuItem.getName());
         ps.setFloat(2, menuItem.getPrice());
         ps.setBoolean(3, menuItem.isActive());

@@ -21,10 +21,11 @@ public class MenuItemController {
         private static final Logger LOGGER = LoggerFactory.getLogger(MenuItemController.class);
         
         @GetMapping(value="/show-menu-list-admin")
-        public String showMenuItemListAdmin(ModelMap model) throws ClassNotFoundException, IOException, SQLException //throws SystemException
+        public String showMenuItemListAdmin(ModelMap model) throws ClassNotFoundException, IOException, SQLException 
         {
             LOGGER.info("Start - showing admin menuItemList");
-            model.addAttribute("menuItemList", menuItemService.getMenuItemListAdmin());
+            model.addAttribute("menuItemListAdmin", menuItemService.getMenuItemListAdmin());
+            System.out.println(menuItemService.getMenuItemListAdmin());
             LOGGER.info("End - admin menuItemList");
             return "menu-item-list-admin";        
         }
